@@ -4,10 +4,8 @@ import androidx.compose.ui.text.toUpperCase
 
 
 fun main(args: Array<String>) {
-   var b = mutableMapOf<String,String>("dfsa" to "fasdf","sdfa"  to "safd" ,"wer"  to "dsaf")
+   var b = mutableMapOf<String,String>("dfsdsafa" to "fasdf","sdfa"  to "safd" ,"wer"  to "dsaf")
     var a = mutableSetOf<String>("dfsa" )
-
-
     var callback  = { a: Int, b: String -> String
         "Abhishek Tripathi"
     }
