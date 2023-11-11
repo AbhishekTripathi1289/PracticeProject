@@ -1,6 +1,4 @@
-package com.example.myapplication.ui.theme
-
-import androidx.compose.ui.text.toUpperCase
+package com.example.myapplication.ui.theme.androidMixPractice
 
 
 fun main(args: Array<String>) {
@@ -15,7 +13,8 @@ fun main(args: Array<String>) {
         Person(2, "zzz"),
         Person(3, "rrr"),
         Person(1, "eee"),
-        Person(4, "wwww"))
+        Person(4, "wwww")
+    )
     )
 
 

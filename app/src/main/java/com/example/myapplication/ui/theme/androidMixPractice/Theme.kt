@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.theme
+package com.example.myapplication.ui.theme.androidMixPractice
 
 import android.app.Activity
 import android.os.Build
