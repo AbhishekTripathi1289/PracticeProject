@@ -19,6 +19,7 @@ class BlogListActivity : AppCompatActivity()
     private lateinit var binding: ActivityBlogListBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityBlogListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         viewModel.setStateEvent(BlogViewModel.MainStateEvent.GetBlogsEvent)

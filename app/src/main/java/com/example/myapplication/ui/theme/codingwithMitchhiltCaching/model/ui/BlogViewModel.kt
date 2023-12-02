@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.theme.codingwithMitchhiltCaching.model.ui
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,6 +9,8 @@ import com.codingwithmitch.daggerhiltplayground.util.DataState
 import com.example.myapplication.ui.theme.codingwithMitchhiltCaching.model.Blog
 import com.example.myapplication.ui.theme.codingwithMitchhiltCaching.model.repo.BlogRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
@@ -23,9 +26,14 @@ class BlogViewModel @Inject constructor(private val mainRepository: BlogRepo): V
     val blogState : LiveData<DataState<List<Blog>>>
         get() = _blogState
 
+
+    private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        Log.e("MainActivity", "Coroutine Exception: ${throwable.message}", throwable)
+    }
+
     fun setStateEvent(mainStateEvent: MainStateEvent){
 
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO + exceptionHandler ) {
 
             when(mainStateEvent)
             {

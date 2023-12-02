@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".ui.theme.cheezyCode.MyApplication"
@@ -15,16 +15,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".ui.theme.codingwithMitchhiltCaching.model.ui.BlogListActivity"-->
-<!--            android:exported="false" />-->
+  <!--      <activity
+            android:name=".ui.theme.manualFragment.FragmentExampleActivity"
+            android:exported="false" />-->
+        <!--
+          <activity
+            android:name=".ui.theme.room_retrofit_di_crud.ui.CrudOperationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <!-- <activity -->
+        <!-- android:name=".ui.theme.codingwithMitchhiltCaching.model.ui.BlogListActivity" -->
+        <!-- android:exported="false" /> -->
         <!--
         <activity
             android:name=".ui.theme.hiltPractice.HiltPracticeActivity"
             android:exported="false" />
         -->
         <activity
-            android:name=".ui.theme.codingwithMitchhiltCaching.model.ui.BlogListActivity"
+            android:name=".ui.theme.manualFragment.FragmentExampleActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MyApplicationSecond">
