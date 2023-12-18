@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.theme.manualFragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +22,7 @@ class FragementA : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        println("FragementA.onCreate")
         arguments.let {
             param1 = it?.getString(ARG_PARAM1)
             param2 = it?.getString(ARG_PARAM2)
@@ -32,6 +34,7 @@ class FragementA : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        println("FragementA.onCreateView")
         binding = FragmentFragementABinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -41,15 +44,56 @@ class FragementA : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+    println("FragementA.onViewCreated")
         binding.button.setOnClickListener{
             activity?.supportFragmentManager
                 ?.beginTransaction()
-                ?.replace(R.id.frameLayout, FragmentB.getFragmentInstance("dsaf", "sadf"))
+                ?.add(R.id.frameLayout, FragmentB.getFragmentInstance("dsaf", "sadf"))
                 ?.addToBackStack(null)
                 ?.commit()
         }
     }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        println("FragementA.onAttach")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        println("FragementA.onPause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("FragementA.onResume")
+    }
+    override fun onStop() {
+        super.onStop()
+        println("FragementA.onStop")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        println("FragementA.onStart")
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        println("FragementA.onDetach")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        println("FragementA.onDestroy")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        println("FragementA.onDestroyView")
+    }
+
+
 
     companion object
     {

@@ -6,5 +6,14 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="light_gray">#a2a2a2</color>
+    <color name="highlight_text_color">#2196F3</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="color_808080_venus">#808080</color>
+    <color name="color_ffffff_no_change_venus">#ffffff</color>
+    <color name="color_ffffff_card_venus">#FFFFFF</color>
+    <color name="color_E94F61_no_change">#E94F61</color>
+    <color name="color_ffffff_venus">#ffffff</color>
+
 </resources>

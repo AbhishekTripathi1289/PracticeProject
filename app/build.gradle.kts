@@ -3,8 +3,9 @@ plugins {
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs")
+    id ("kotlin-parcelize")
 }
-
 android {
     namespace = "com.example.myapplication"
     compileSdk = 34
@@ -16,8 +17,8 @@ android {
         applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 1000
+        versionName = "1000"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -40,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
@@ -72,21 +74,37 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    //ktx extenstion
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
 
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
 
+    // navigation component
+    var navVersion = "2.4.2"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+    implementation("androidx.fragment:fragment-ktx:1.5.2")
+
+    //dagger hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
+    //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
+    //Custom Progress Bar
+    implementation("androidx.navigation:navigation-compose:2.5.2")
+
+    //room db
     implementation("androidx.room:room-runtime:2.6.0")
     implementation("androidx.room:room-ktx:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
+
 
 
 }

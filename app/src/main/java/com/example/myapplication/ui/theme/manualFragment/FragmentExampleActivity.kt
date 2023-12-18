@@ -7,7 +7,9 @@ import androidx.fragment.app.activityViewModels
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityFragmentExampleBinding
 import com.example.myapplication.ui.theme.codingwithMitchhiltCaching.model.ui.BlogViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FragmentExampleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFragmentExampleBinding
@@ -20,7 +22,7 @@ class FragmentExampleActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.frameLayout, FragementA.getFragmentInstance("sag" , "dsfa"))
+            .add(R.id.frameLayout, FragementA.getFragmentInstance("sag" , "dsfa"))
             .commit()
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="StoriesProgressView">
+        <attr name="progressCount" format="integer|reference" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="progressDrawable" format="reference" />
+        <attr name="shouldUseDynamicItemWidth" format="boolean"/>
+        <attr name="shouldUseDynamicItemHeight" format="boolean"/>
+        <attr name="shouldUseDynamicProgressDrawable" format="boolean"/>
+    </declare-styleable>
+</resources>

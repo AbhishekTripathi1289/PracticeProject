@@ -38,7 +38,7 @@ class BlogListActivity : AppCompatActivity()
 
                 is DataState.Error -> {
                     displayProgressBar(false)
-                    displayError(dataState.exception.message)
+                    displayError(dataState.exception?.message)
                 }
 
                 is DataState.Loading -> {

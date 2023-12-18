@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight" />
 
-    <style name="Theme.MyApplicationSecond" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="Theme.MyApplicationSecond" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomTextStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+
+        <item name="android:textSize">50sp</item>
+    </style>
 
 
 </resources>
