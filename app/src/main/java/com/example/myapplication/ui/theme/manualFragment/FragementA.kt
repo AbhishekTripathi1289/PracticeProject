@@ -48,7 +48,7 @@ class FragementA : Fragment() {
         binding.button.setOnClickListener{
             activity?.supportFragmentManager
                 ?.beginTransaction()
-                ?.add(R.id.frameLayout, FragmentB.getFragmentInstance("dsaf", "sadf"))
+                ?.add(R.id.frameLayout, FragementB.getFragmentInstance("dsaf", "sadf"))
                 ?.addToBackStack(null)
                 ?.commit()
         }

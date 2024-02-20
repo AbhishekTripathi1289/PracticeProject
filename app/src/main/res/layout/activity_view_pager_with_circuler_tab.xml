@@ -20,7 +20,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:tabIndicator="@null"
         app:tabBackground="@drawable/tab_selector"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
 
 
 
-    <com.example.myapplication.ui.theme.androidwidgets.activity.mix.StoriesProgressView
+    <com.example.myapplication.ui.theme.androidwidgets.views.StoriesProgressView
         android:id="@+id/indicators"
         android:layout_width="wrap_content"
         android:layout_height="30dp"

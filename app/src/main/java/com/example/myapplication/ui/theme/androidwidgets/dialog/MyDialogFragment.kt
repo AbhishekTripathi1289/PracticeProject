@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.theme.androidwidgets.activity.mix
+package com.example.myapplication.ui.theme.androidwidgets.dialog
 
 import android.app.Dialog
 import android.os.Bundle

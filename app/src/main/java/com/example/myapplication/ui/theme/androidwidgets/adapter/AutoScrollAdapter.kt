@@ -1,18 +1,17 @@
-package com.example.myapplication.ui.theme.androidwidgets
+package com.example.myapplication.ui.theme.androidwidgets.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.AutoScrollLayoutBinding
 
-class PagerSnapAdapter(var list: ArrayList<String>) : RecyclerView.Adapter<PagerSnapAdapter.ViewHolderClass>()
+class AutoScrollAdapter(var list: ArrayList<String>) : RecyclerView.Adapter<AutoScrollAdapter.ViewHolderClass>()
 {
     init {
         list = arrayListOf("abdsafasc", "abdsafasc" , "abdsafasc", "abdsafasc", "abdsafasc", "abdsafasc","abdsafasc","abdsafasc", "abdsafasc", "abdsafasc" )
     }
     inner class ViewHolderClass(var binding : AutoScrollLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(get: String, position: Int) {
+        fun bind(get: String) {
                 binding.textView.text = get
         }
     }
@@ -27,6 +26,6 @@ class PagerSnapAdapter(var list: ArrayList<String>) : RecyclerView.Adapter<Pager
     }
 
     override fun onBindViewHolder(holder: ViewHolderClass, position: Int) {
-        holder.bind(list.get(position), position)
+        holder.bind(list.get(position))
     }
 }

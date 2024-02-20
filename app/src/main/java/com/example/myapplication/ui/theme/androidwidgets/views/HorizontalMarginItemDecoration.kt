@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.theme.androidwidgets.activity.mix
+package com.example.myapplication.ui.theme.androidwidgets.views
 
 import android.content.Context
 import android.graphics.Rect

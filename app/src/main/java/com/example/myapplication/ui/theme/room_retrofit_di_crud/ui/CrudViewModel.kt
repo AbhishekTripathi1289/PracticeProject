@@ -22,7 +22,7 @@ class CrudViewModel @Inject constructor(private var repo:CrudRepo, private var b
 
     lateinit var studentList : LiveData<List<Student>>
 
-   /* private val _studentList : MutableLiveData<DataState<List<Student>>> = MutableLiveData()
+    /*private val _studentList : MutableLiveData<DataState<List<Student>>> = MutableLiveData()
     val studentList
         get() = _studentList*/
 
@@ -30,7 +30,7 @@ class CrudViewModel @Inject constructor(private var repo:CrudRepo, private var b
     val blogsList
         get() = _blogsList
 
-/*    fun getAllStudent(){
+   /* fun getAllStudent(){
         viewModelScope.launch{
             repo.getAllStudent().onEach {
                 _studentList.value = it

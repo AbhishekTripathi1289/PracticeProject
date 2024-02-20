@@ -94,6 +94,8 @@ class SignInFragment : Fragment() {
                DataState.Loading ->{
                    binding.progressBar.visibility = View.VISIBLE
                }
+
+               else -> {}
            }
        }
     }

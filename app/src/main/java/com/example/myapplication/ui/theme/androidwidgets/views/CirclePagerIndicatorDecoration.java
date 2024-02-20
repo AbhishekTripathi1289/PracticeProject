@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.theme.androidwidgets;
+package com.example.myapplication.ui.theme.androidwidgets.views;
 
 /*
  * The MIT License (MIT)

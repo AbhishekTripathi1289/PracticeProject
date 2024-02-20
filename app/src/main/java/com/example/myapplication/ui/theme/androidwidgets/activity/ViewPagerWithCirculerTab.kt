@@ -3,15 +3,13 @@ package com.example.myapplication.ui.theme.androidwidgets.activity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityViewPagerWithCirculerTabBinding
-import com.example.myapplication.ui.theme.androidwidgets.activity.mix.HorizontalMarginItemDecoration
-import com.example.myapplication.ui.theme.androidwidgets.activity.mix.StoriesProgressView
+import com.example.myapplication.ui.theme.androidwidgets.views.HorizontalMarginItemDecoration
+import com.example.myapplication.ui.theme.androidwidgets.views.StoriesProgressView
 import com.example.myapplication.ui.theme.androidwidgets.adapter.ImageViewPagerWithCirculeTabLayoutAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import java.lang.Math.abs
 
 
 class ViewPagerWithCirculerTab : AppCompatActivity() {

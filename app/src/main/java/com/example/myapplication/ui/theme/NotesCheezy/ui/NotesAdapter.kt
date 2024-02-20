@@ -11,7 +11,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
     inner class NotesViewHolder(noteItemBinding: NoteItemBinding): RecyclerView.ViewHolder(noteItemBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
-        return NotesViewHolder(NoteItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return NotesViewHolder(NoteItemBinding.inflate(LayoutInflater.from(parent.context), parent,false))
     }
 
     override fun getItemCount(): Int {

@@ -1,18 +1,16 @@
-package com.example.myapplication.ui.theme.androidwidgets
+package com.example.myapplication.ui.theme.androidwidgets.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.DisplayMetrics
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityAndroidWidgetImplementtationBinding
+import com.example.myapplication.ui.theme.androidwidgets.views.CirclePagerIndicatorDecoration
+import com.example.myapplication.ui.theme.androidwidgets.adapter.PagerSnapAdapter
 
 class AndroidWidgetImplementtationActivity : AppCompatActivity() {
 
@@ -28,7 +26,6 @@ class AndroidWidgetImplementtationActivity : AppCompatActivity() {
 
     private fun setUpPagerAdapter() {
         adapter = PagerSnapAdapter(arrayListOf("sadfd", "dsaf"))
-
         binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.addItemDecoration(CirclePagerIndicatorDecoration())

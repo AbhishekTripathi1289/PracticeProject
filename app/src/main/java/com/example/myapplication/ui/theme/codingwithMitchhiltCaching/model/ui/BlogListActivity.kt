@@ -44,6 +44,8 @@ class BlogListActivity : AppCompatActivity()
                 is DataState.Loading -> {
                     displayProgressBar(true)
                 }
+
+                else -> {}
             }
         }
     }

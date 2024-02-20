@@ -30,6 +30,6 @@ interface CrudDao {
 
 
     /*Room with Flow */
-   /* @Query("SELECT * FROM student_table")
+  /*  @Query("SELECT * FROM student_table")
     fun getAllStudent(): Flow<List<Student>>*/
 }

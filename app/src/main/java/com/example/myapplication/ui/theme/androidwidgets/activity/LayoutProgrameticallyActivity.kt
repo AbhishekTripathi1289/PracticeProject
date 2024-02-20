@@ -1,31 +1,22 @@
 package com.example.myapplication.ui.theme.androidwidgets.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.util.TimeUtils
-import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityLayoutProgrameticallyBinding
-import com.example.myapplication.ui.theme.androidwidgets.activity.mix.MyDialogFragment
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Date
-import java.util.Timer
-import java.util.TimerTask
-import java.util.concurrent.TimeUnit
-
-
+import com.example.myapplication.databinding.CustomeLayoutBinding
+import com.example.myapplication.ui.theme.androidwidgets.dialog.MyDialogFragment
 
 
 /*Mix Activity */
 class LayoutProgrameticallyActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLayoutProgrameticallyBinding
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,11 +28,11 @@ class LayoutProgrameticallyActivity : AppCompatActivity() {
 
 
         binding.button2.setOnClickListener{
-
         var dialgo = MyDialogFragment()
             dialgo.show(supportFragmentManager, "MyDialog")
         }
 
+        inflateLayout()
 
        /* var date = Date(Calendar.getInstance().timeInMillis)
 
@@ -108,7 +99,7 @@ class LayoutProgrameticallyActivity : AppCompatActivity() {
 
         listOf<String>("item 1", "item 2" , "item 3" ,"item 4" ,"item 5" ).forEachIndexed { index, item ->
 
-           /* var layout = CustomeLayoutBinding.inflate(layoutInflater)
+            var layout = CustomeLayoutBinding.inflate(layoutInflater)
             val finalPos = index
             layout.textView.text = item
             layout.textView.setOnClickListener{
@@ -116,13 +107,16 @@ class LayoutProgrameticallyActivity : AppCompatActivity() {
                 handleSelectedBackground(binding.linearLayout, selectedPos, false)
                 selectedPos = finalPos
                 handleSelectedBackground(binding.linearLayout, selectedPos, true)
-            }*/
+            }
 
-         /*   var layoutParms = ConstraintLayout.LayoutParams(300, 300)
-            layoutParms.marginStart = 20
-            layoutParms.marginEnd = 20
+            var layoutParms = ConstraintLayout.LayoutParams(300, 300)
+            layoutParms.setMargins(20, 0, 0, 0)
 
-            layout.root.layoutParams = layoutParms*/
+
+
+
+            layout.constraintLayout.layoutParams = layoutParms
+            binding.linearLayout.addView(layout.root)
             //layout.constraintLayout.layoutParams = layoutParms
 
 
@@ -134,9 +128,9 @@ class LayoutProgrameticallyActivity : AppCompatActivity() {
 
 
 
-            var textView = TextView(this)
+           /* var textView = TextView(this)
 
-            var layoutParms : ViewGroup.LayoutParams= ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT   )
+            var layoutParms : ViewGroup.LayoutParams= ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT )
             textView.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_500))
             textView.setTextColor(ContextCompat.getColor(this, R.color.white))
 
@@ -146,7 +140,7 @@ class LayoutProgrameticallyActivity : AppCompatActivity() {
 
             textView.layoutParams = layoutParms
 
-           // binding.linearLayout.addView(textView)
+            binding.linearLayout.addView(textView)*/
 
         }
 

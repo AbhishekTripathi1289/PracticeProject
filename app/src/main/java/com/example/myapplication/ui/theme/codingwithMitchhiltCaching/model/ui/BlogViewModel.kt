@@ -24,7 +24,7 @@ import javax.inject.Inject
 @HiltViewModel
 class BlogViewModel @Inject constructor(private val mainRepository: BlogRepo): ViewModel()
 {
-    private val _blogState : MutableLiveData<DataState<List<Blog>>> = MutableLiveData()
+        private val _blogState : MutableLiveData<DataState<List<Blog>>> = MutableLiveData()
     val blogState : LiveData<DataState<List<Blog>>>
         get() = _blogState
 
@@ -35,7 +35,8 @@ class BlogViewModel @Inject constructor(private val mainRepository: BlogRepo): V
 
     fun setStateEvent(mainStateEvent: MainStateEvent){
 
-        viewModelScope.launch(Dispatchers.IO + exceptionHandler ) {
+
+        viewModelScope.launch(Dispatchers.IO + exceptionHandler) {
 
             when(mainStateEvent)
             {

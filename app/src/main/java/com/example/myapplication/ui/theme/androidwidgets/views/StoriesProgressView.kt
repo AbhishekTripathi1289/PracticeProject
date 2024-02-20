@@ -1,10 +1,9 @@
-package com.example.myapplication.ui.theme.androidwidgets.activity.mix
+package com.example.myapplication.ui.theme.androidwidgets.views
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.LinearInterpolator

@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.theme.todoCodingInFlow.ui.task
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -17,6 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentTasksBinding
 import com.example.myapplication.ui.theme.todoCodingInFlow.data.Task
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 
 class TaskFragment: Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClickListener
 {
@@ -38,11 +41,11 @@ class TaskFragment: Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClickL
         }
 
 
-
         viewModel.todoTask.observe(requireActivity()){
 
             taskAdapter.submitList(it)
         }
+
 
         setHasOptionsMenu(true)
     }

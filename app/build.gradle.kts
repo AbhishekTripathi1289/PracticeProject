@@ -103,6 +103,18 @@ dependencies {
     //room db
     implementation("androidx.room:room-runtime:2.6.0")
     implementation("androidx.room:room-ktx:2.6.0")
+
+    //paggnation
+    implementation("androidx.paging:paging-runtime:3.0.0-alpha05")
+
+    //glide
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+
+
+    api("androidx.work:work-runtime:2.7.1")
+    api("androidx.work:work-runtime-ktx:2.7.1")
+
     kapt("androidx.room:room-compiler:2.6.0")
 
 

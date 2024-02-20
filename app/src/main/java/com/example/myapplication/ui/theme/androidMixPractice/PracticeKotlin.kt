@@ -1,23 +1,35 @@
 package com.example.myapplication.ui.theme.androidMixPractice
 
 
-fun main(args: Array<String>) {
-  /* var b = mutableMapOf<String,String>("dfsdsafa" to "fasdf","sdfa"  to "safd" ,"wer"  to "dsaf")
-    var a = mutableSetOf<String>("dfsa" )
+class Abc{
 
-    var listFirst = mutableListOf<Person>(
-        Person(1, "www"),
-        Person(2, "zzz"),
-        Person(3, "rrr"),
-        Person(1, "eee"),
-        Person(4, "wwww")
-    )*/
+    var list = arrayListOf<Persons>(Persons("abc", 1), Persons("dsfa", 2))
+    fun printData()
+    {
+        var str = ""
+        var a = with(str){
+            3
+        }
 
+
+
+        list.associate {
+            Pair( "my age ${it.age}", it)
+        }
+    }
 
 
 }
 
 
+data class Persons(var name: String, var age: Int)
 
-data class Person(var id: Int, var name: String)
 
+
+
+
+fun abc()
+{
+    /*var session = Abc()
+    session.name = ""*/
+}

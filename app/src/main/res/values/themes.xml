@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight" />
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 
     <style name="Theme.MyApplicationSecond" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
         <item name="android:windowNoTitle">true</item>
@@ -14,6 +14,11 @@
 
         <item name="android:textSize">50sp</item>
     </style>
+    <style name="tabLayout_single_line_theme" parent="@style/Theme.MyApplication">
+        <item name="android:singleLine">true</item>
+    </style>
+
+
 
 
 </resources>

@@ -36,6 +36,7 @@ class SingUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         if(tokenManager.getToken() != null)
         {
             val action = SignInFragmentDirections.actionSignInFragmentToMainFragment()
@@ -76,6 +77,8 @@ class SingUpFragment : Fragment() {
                 DataState.Loading ->{
                     binding.progressBar.visibility = View.VISIBLE
                 }
+
+                else -> {}
             }
         }
     }

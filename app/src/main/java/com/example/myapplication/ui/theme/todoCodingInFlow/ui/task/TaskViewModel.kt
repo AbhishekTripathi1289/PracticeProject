@@ -12,7 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class TaskViewModel @Inject constructor(val taskDao: TaskDao): ViewModel()
 {
-    val searchQuery  = MutableStateFlow("")
+    val searchQuery: MutableStateFlow<String> = MutableStateFlow("")
 
     private val taskFlow = searchQuery.flatMapLatest {
         taskDao.getTask(it)

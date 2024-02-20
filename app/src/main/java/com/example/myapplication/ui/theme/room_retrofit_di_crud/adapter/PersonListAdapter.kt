@@ -17,6 +17,12 @@ class PersonListAdapter(var studentList: List<Student>, var deleteCallback: (Stu
     }
     inner class PersonViewHolder(var itemViewLayout: ItemRecyclerviewCrudBinding) : ViewHolder(itemViewLayout.root)
     {
+        init {
+            itemViewLayout.imageViewDelete.setOnClickListener{
+                deleteCallback.invoke(studentList.get(bindingAdapterPosition))
+
+            }
+        }
         fun bind(position: Int)
         {
             itemViewLayout.imageViewDelete.setOnClickListener{
