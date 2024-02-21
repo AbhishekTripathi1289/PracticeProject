@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityViewPagerWithCirculerTabBinding
+import com.example.myapplication.ui.theme.androidwidgets.adapter.ImageViewPagerWithCirculeTabLayoutAdapter
 import com.example.myapplication.ui.theme.androidwidgets.views.HorizontalMarginItemDecoration
 import com.example.myapplication.ui.theme.androidwidgets.views.StoriesProgressView
-import com.example.myapplication.ui.theme.androidwidgets.adapter.ImageViewPagerWithCirculeTabLayoutAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 
 class ViewPagerWithCirculerTab : AppCompatActivity() {
     private lateinit var binding: ActivityViewPagerWithCirculerTabBinding
     private var curSelectedPosition = 0
-    private val totalTime: Long = 6*1000
-    private var listSize :Int = 10
+    private val totalTime: Long = 6 * 1000
+    private var listSize: Int = 10
     private var shouldUpdateTopMargin: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,8 @@ class ViewPagerWithCirculerTab : AppCompatActivity() {
         // Add a PageTransformer that translates the next and previous items horizontally
         // towards the center of the screen, which makes them visible
         val nextItemVisiblePx = resources.getDimension(R.dimen.viewpager_next_item_visible)
-        val currentItemHorizontalMarginPx = resources.getDimension(R.dimen.viewpager_current_item_horizontal_margin)
+        val currentItemHorizontalMarginPx =
+            resources.getDimension(R.dimen.viewpager_current_item_horizontal_margin)
         val pageTranslationX = nextItemVisiblePx + currentItemHorizontalMarginPx
         val pageTransformer = ViewPager2.PageTransformer { page: View, position: Float ->
             page.translationX = -pageTranslationX * position
@@ -42,10 +43,10 @@ class ViewPagerWithCirculerTab : AppCompatActivity() {
             // If you want a fading effect uncomment the next line:
             // page.alpha = 0.25f + (1 - abs(position))
         }
-        binding.viewPager.setPageTransformer(pageTransformer)
+        //binding.viewPager.setPageTransformer(pageTransformer)
 
-            // The ItemDecoration gives the current (centered) item horizontal margin so that
-            // it doesn't occupy the whole screen width. Without it the items overlap
+        // The ItemDecoration gives the current (centered) item horizontal margin so that
+        // it doesn't occupy the whole screen width. Without it the items overlap
         val itemDecoration = HorizontalMarginItemDecoration(
             this,
             R.dimen.viewpager_current_item_horizontal_margin
@@ -56,8 +57,7 @@ class ViewPagerWithCirculerTab : AppCompatActivity() {
         }.attach()
 
 
-        binding.viewPager.registerOnPageChangeCallback( object : ViewPager2.OnPageChangeCallback()
-        {
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 curSelectedPosition = position
