@@ -11,5 +11,6 @@ class ImageSearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image_search)
         /*Navigation Implemented*/
+
     }
 }
